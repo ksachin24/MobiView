@@ -1,0 +1,18 @@
+{
+    "Deviceserialno": "RZCW31E6X5R",
+    "HardwareBoardPlatform": "universal2100_r",
+    "ProductManufacturer": "samsung",
+    "ProductSocManufacturer": "Samsung",
+    "SocModel": "Exynos 2100",
+    "HardwareBaseBand": "unknown",
+    "DeviceModemType": "dsds",
+    "HardwareGPUPlatform": "mali",
+    "NFCChipType": "",
+    "PhysicalDeviceScreenSize": "1080x2340",
+    "PhysicalDeviceScreenDensity": "480\r",
+    "PhysicalDeviceScreenRotation": "lock 0",
+    "PhysicalDeviceScreenMultiWindowConfig": [
+        "Supports non-resizable in multi window: -1",
+        "Respects activity min width/height in multi window: 0"
+    ]
+}

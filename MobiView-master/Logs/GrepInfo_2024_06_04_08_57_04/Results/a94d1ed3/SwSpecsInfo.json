@@ -1,0 +1,15 @@
+{
+    "Adb_Version": [
+        "Android Debug Bridge version 1.0.41",
+        "Version 35.0.1-11580240",
+        "Installed as C:\\Users\\MOHAMMAD ASIF RAZA\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+        "Running on Windows 10.0.22631"
+    ],
+    "Android_Version": "12",
+    "Kernel_Version": "",
+    "Open_GLes_Version": "Qualcomm, Adreno (TM) 618, OpenGL ES 3.2 V@0502.0 (GIT@820d4a4028, I5580630f49, 1636016138) (Date:11/04/21)",
+    "Android_SDK_Version": "31",
+    "Product_SDK_Version": "31",
+    "System_SDK_Version": "31",
+    "Vendor_SDK_Version": "30"
+}
