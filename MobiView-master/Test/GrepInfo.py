@@ -18,7 +18,7 @@ from Lib.FileSystemUtils import FileSystemUtils
 from SpecsInfo.HwSpecsInfo import HWSpecsInfo
 from SpecsInfo.SwSpecsInfo import SwSpecsInfo
 from SpecsInfo.CpuSpecsInfo import CpuSpecsInfo
-#from specsInfo.BatterySpecsInfo import BatterySpecsInfo
+from SpecsInfo.DisplaySpecsInfo import DisplaySpecsInfo
 from Lib.XlsxGenerator import XlsxGenerator
 
 log = logging.getLogger(__name__)
@@ -44,7 +44,7 @@ class GrepInfo():
         self.HwSpecsObj = None
         self.SwSpecsObj = None
         self.CpuSpecsObj = None
-        #self.BatterySpecsObj = None
+        self.DisplaySpecsObj = None
 
         self.fpObj = None
         self.xlObj = None
@@ -65,16 +65,16 @@ class GrepInfo():
         self.HwSpecsObj = HWSpecsInfo()
         self.SwSpecsObj = SwSpecsInfo()
         self.CpuSpecsObj = CpuSpecsInfo()
-        #self.BatterySpecsObj = BatterySpecsInfo()
+        self.DisplaySpecsObj = DisplaySpecsInfo()
 
         self.HwSpecsObj.setup()
         self.SwSpecsObj.setup()
         self.CpuSpecsObj.setup()
-        #self.BatterySpecsObj.setup()
+        self.DisplaySpecsObj.setup()
 
         self.setResultsDir()
         LogConf.configureLogging(self.getResultsFolder())
-        workbookname = self.HwSpecsObj.getDeviceSerialNo()+'_Device_Specs_Info.xlsx'
+        workbookname = self.DisplaySpecsObj.getDeviceSerialNo()+'_Display_Specs_Info.xlsx'
         self.xlObj.createOrLoadWorkBook(folder=self.getResultsFolder(),
                                         bookname= workbookname)
         self.wb = self.xlObj.getWorkBook()
@@ -89,7 +89,7 @@ class GrepInfo():
         self.generateSpecInfoJson(self.HwSpecsObj)
         self.generateSpecInfoJson(self.SwSpecsObj)
         self.generateSpecInfoJson(self.CpuSpecsObj)
-        #self.generateSpecInfoJson(self.BatterySpecsObj)
+        self.generateSpecInfoJson(self.DisplaySpecsObj)
 
 
     def generateSpecInfoJson(self,specsInfoObj=None):
@@ -116,7 +116,7 @@ class GrepInfo():
         self.resultsDir = os.path.join(self.fpObj.getLogDir(),
                                        logFolderName,
                                        'Results',
-                                       self.HwSpecsObj.getDeviceSerialNo())
+                                       self.DisplaySpecsObj.getDeviceSerialNo())
         if not os.path.exists(self.resultsDir):
             os.makedirs(self.resultsDir)
 
