@@ -1,0 +1,2 @@
+2024-06-19 12:11:01,285 ERROR    root          [Runner.py:56] [MainThread]  Unexpected error in setup() or execute() :'DisplaySpecsInfo' object has no attribute 'getDeviceSerialNo'
+2024-06-19 12:11:01,285 ERROR    root          [Runner.py:62] [MainThread]  Unexpected error while cleanup:'NoneType' object does not support item deletion

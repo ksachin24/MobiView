@@ -74,7 +74,7 @@ class GrepInfo():
 
         self.setResultsDir()
         LogConf.configureLogging(self.getResultsFolder())
-        workbookname = self.DisplaySpecsObj.getDeviceSerialNo()+'_Display_Specs_Info.xlsx'
+        workbookname = self.HwSpecsObj.getDeviceSerialNo()+'_Display_Specs_Info.xlsx'
         self.xlObj.createOrLoadWorkBook(folder=self.getResultsFolder(),
                                         bookname= workbookname)
         self.wb = self.xlObj.getWorkBook()
@@ -116,7 +116,7 @@ class GrepInfo():
         self.resultsDir = os.path.join(self.fpObj.getLogDir(),
                                        logFolderName,
                                        'Results',
-                                       self.DisplaySpecsObj.getDeviceSerialNo())
+                                       self.HwSpecsObj.getDeviceSerialNo())
         if not os.path.exists(self.resultsDir):
             os.makedirs(self.resultsDir)
 

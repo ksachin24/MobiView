@@ -47,7 +47,7 @@ class MobileSpecsInfo(object):
         self.SwSpecsInfoDict  = {}
         self.CpuSpecsInfoDict = {}
         self.MemSpecsInfoDict = {}
-        self.displaySpecsInfoDict ={}
+        self.DisplaySpecsInfoDict ={}
         #self.batterySpecsInfoDict = {}
         self.cameraSpecsInfoDict = {}
 
